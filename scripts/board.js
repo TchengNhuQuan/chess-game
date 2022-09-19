@@ -5,9 +5,9 @@ function Cell(x, y, color) {
   this.piece = null;
   this.block = initElement(color);
 
-  this.setPiece = function (currentPiece) {
-    this.piece = currentPiece;
-  };
+  // this.setPiece = function (currentPiece) {
+  //   this.piece = currentPiece;
+  // };
 
   function initElement(currentColor) {
     const cellElement = document.createElement("div");
@@ -71,16 +71,16 @@ function Board() {
     this.rows = currentRows;
   };
 
-  function putChess (x, y, currentPiece) {
-    const currentRow = this.rows.find((row) => row.line === x);
-    const currentCell = currentRow.cells[y];
-    currentCell.setPiece(currentPiece);
-  };
+  // function putChess (x, y, currentPiece) {
+  //   const currentRow = this.rows.find((row) => row.line === x);
+  //   const currentCell = currentRow.cells[y];
+  //   currentCell.setPiece(currentPiece);
+  // };
 
-  this.initChess = function () { // 
-    // xu ly khoi tao quan co
-    // đặt quân cờ bằng private method
-  };
+  // this.initChess = function () { // 
+  //   // xu ly khoi tao quan co
+  //   // đặt quân cờ bằng private method
+  // };
 
   this.render = function () {
     for (const row of this.rows) {
@@ -95,8 +95,8 @@ function Board() {
 
   this.init = function () {
     // init data
-   initRows();
-   initChess();
+     initRows();
+  //  initChess();
     // xu ly DOM
     this.render();
   };
